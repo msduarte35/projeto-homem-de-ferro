@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+
+
+body {
+  font-family: 'kdam thmor pro', sans-serif;
+  background: url('https://encurtador.com.br/0TujU') no-repeat center center fixed;
+  background-size: cover; /* faz a imagem ocupar toda a tela */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.container {
+    background-color:black;
+    max-width: 700px;
+    margin: 0 auto;
+    padding:20px 30px;
+    box-shadow:  0 0 10px rgba( 0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: firebrick;
+
+}
+
+form{
+    margin-bottom: 30px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color:firebrick;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width:  100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid black;
+border-radius: 4px;
+font-size: 1rem;
+resize: vertical;
+
+}
+
+textarea {
+    min-height: 100px;
+    
+}
+
+button {
+   width:200px;
+    height:55px;
+    background-color:#d21617;
+    color:#fff;
+    padding:8px 10px;
+    border-radius:5px;
+    cursor: pointer;
+    transition:0.8s;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-weight: bold;
+    border:none;
+    outline:none;
+    margin-top: 25px;
+}
+
+
+button:hover {
+    background-color:#fff;
+    color:#000;
+    
+}
+
+.comments{
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+
+}
+ 
+.comment:last-child{
+    border-bottom: none;
+}
+
+.comment .author {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.comment .date{   
+    font-size: 0.85rem;
+    color: #fff;
+    margin-left: 10px;
+}  
+ 
+
+.comment .text {
+    margin-top: 8px;
+    white-space: pre-wrap;
+}
+
+header{
+   
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+}
+
+nav{
+    width: 60%;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 19px ;
+    transition: .5s;
+    font-family: 'kdam thmor pro', sans-serif;
+}
+
+li:hover{
+    color: #d21617;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    
+}
+
+.span1, .span2 {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 10px;
+  font-family:'kdam thmor pro', sans-serif; 
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comment-header img {
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}

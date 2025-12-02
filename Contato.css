@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'kdam thmor pro', sans-serif;
+  background: url('https://encurtador.com.br/0TujU') no-repeat center center fixed;
+  background-size: cover; /* faz a imagem ocupar toda a tela */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header{
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+}
+
+nav{
+    width: 60%;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px ;
+    transition: .5s;
+    font-family: 'kdam thmor pro', sans-serif;
+}
+
+li:hover{
+    color: #d21617;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    
+}
+
+/* Container do formulário */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 76, 0, 0.6);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4c00;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4c00;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e64400;
+}
+
+/* Rodapé dentro do container */
+.span1, .span2 {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 10px;
+  font-family:'kdam thmor pro', sans-serif; ;
+}
+

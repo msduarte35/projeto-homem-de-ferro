@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Comentario.css">
+</head>
+<body>
+
+    <header>
+    <img  id="logo" src="./logo homem de ferro.jpg" />
+    <nav>
+        <ul>
+               <a href="./indexHOME.html"> 
+                <li>Home</li>
+                </a>
+                
+                <a href="./Contato.html">
+                 <li>Contato</li>
+                 </a>
+
+                <a href="./Fotos.html">
+                <li>Fotos</li>
+                </a>
+
+                <a href="./comentarios.html">
+                <li>Comentários</li>
+                </a>
+        </ul>
+    </nav>
+   </header>
+
+
+    <div class="container">
+    <h1>Comentários sobre o filme homem de ferro</h1>
+    <form id="commentForm">
+        
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+       <label for="avatar">URL da Foto (opcional):</label>
+      <input type="text" id="avatar" name="avatar" placeholder="https://exemplo.com/foto.jpg" />
+
+      <label for="comment">Comentário:</label>
+      <textarea id="comment" name="comment" required></textarea>
+        
+      <button type="submit">Enviar Comentário</button>
+
+
+    </form>
+    <div class="comments" id="commentsSection">
+      <div class="comment">
+        <div class="comment-header">
+          <img src="https://i.pravatar.cc/40?img=5" alt="Avatar Maria Silva" />
+          <span class="author">Maria Silva</span>
+          <span class="date">- 20/04/2024 14:30</span>
+        </div>
+        <div class="text">Filme Espetacular,com muita ação e diversão ao mesmo tempo.gostei!.</div>
+      </div>
+      <div class="comment-header">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.zgHtF7TEeEPwrJuV3wCSXwHaLG?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Avatar Maria joana" />
+         <span class="author">Maria Pereira</span>
+          <span class="date">- 21/04/2024 09:15</span>
+        </div>
+        <div class="text">Gostei bastante, top demais .</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<script>
+    const form = document.getElementById('commentForm');
+    const commentssection = document.getElementById('commentssection');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const commentText = form.comment.value.trim();
+      if (!name || !email || !commentText) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+          // Usa a URL do avatar informada ou gera uma padrão com base no email
+      const avatarUrl = avatarUrlInput || 'https://i.pravatar.cc/40?u=' + encodeURIComponent(email);
+      // Cria o elemento do comentário
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
+      commentDiv.innerHTML = `
+        <div>
+          <span class="author">${name}</span>
+          <span class="date">- ${dateStr}</span>
+        </div>
+        <div class="text">${commentText.replace(/\n/g, '<br>')}</div>
+      `;
+      // Adiciona o novo comentário no topo da lista
+      commentsSection.insertBefore(commentDiv, commentsSection.firstChild);
+      // Limpa o formulário
+      form.reset();
+    });
+  </script>
+
+ <span class="span1">Todos os direitos reservados ©</span>
+ <span class="span2">Desenvolvido por: Marcos Duarte</span>
+</body>
+</html>
