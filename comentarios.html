@@ -1,3 +1,4 @@
+<!-- Página de comentários do site -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
 </head>
 <body>
 
+    <!-- Cabeçalho com logo e navegação -->
     <header>
     <img  id="logo" src="./logo homem de ferro.jpg" />
     <nav>
@@ -32,6 +34,7 @@
    </header>
 
 
+    <!-- Formulário de envio de comentários -->
     <div class="container">
     <h1>Comentários sobre o filme homem de ferro</h1>
     <form id="commentForm">
@@ -52,6 +55,8 @@
 
 
     </form>
+
+    <!-- Lista de comentários exibidos -->
     <div class="comments" id="commentsSection">
       <div class="comment">
         <div class="comment-header">
@@ -74,36 +79,54 @@
 
 
 <script>
+    // Busca o formulário pelo id do HTML
     const form = document.getElementById('commentForm');
-    const commentssection = document.getElementById('commentssection');
+
+    // Busca a área onde os comentários são exibidos
+    const commentsSection = document.getElementById('commentsSection');
+
+    // Quando o formulário for enviado, executa esta função
     form.addEventListener('submit', function(event) {
+      // Impede o envio padrão do formulário para a página
       event.preventDefault();
 
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const commentText = form.comment.value.trim();
+      // Lê o texto digitado nos campos do formulário
+      const name = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const avatar = form.elements.avatar.value.trim();
+      const commentText = form.elements.comment.value.trim();
+
+      // Valida se o nome, email e comentário foram preenchidos
       if (!name || !email || !commentText) {
         alert('Por favor, preencha todos os campos.');
         return;
       }
 
-          // Usa a URL do avatar informada ou gera uma padrão com base no email
-      const avatarUrl = avatarUrlInput || 'https://i.pravatar.cc/40?u=' + encodeURIComponent(email);
-      // Cria o elemento do comentário
+      // Se o usuário não digitou avatar, cria um avatar padrão com base no email
+      const avatarUrl = avatar || 'https://i.pravatar.cc/40?u=' + encodeURIComponent(email);
+
+      // Cria uma div nova para guardar o comentário
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('comment');
+
+      // Cria a data e hora atual do comentário
       const now = new Date();
-      const dateStr = now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
+      const dateStr = now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'});
+
+      // Monta o HTML interno do comentário com nome, data, avatar e texto
       commentDiv.innerHTML = `
-        <div>
+        <div class="comment-header">
+          <img src="${avatarUrl}" alt="Avatar ${name}" />
           <span class="author">${name}</span>
           <span class="date">- ${dateStr}</span>
         </div>
         <div class="text">${commentText.replace(/\n/g, '<br>')}</div>
       `;
-      // Adiciona o novo comentário no topo da lista
+
+      // Insere o comentário novo no começo da lista de comentários
       commentsSection.insertBefore(commentDiv, commentsSection.firstChild);
-      // Limpa o formulário
+
+      // Limpa todos os campos do formulário após enviar
       form.reset();
     });
   </script>

@@ -1,35 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-
-
+/* Fundo da página de comentários */
 body {
   font-family: 'kdam thmor pro', sans-serif;
-  background: url('https://encurtador.com.br/0TujU') no-repeat center center fixed;
-  background-size: cover; /* faz a imagem ocupar toda a tela */
+  background-image: url('https://image.tmdb.org/t/p/original/tAcDOFX0WludQhvTdmG2rDxyQRM.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #fff;
   margin: 0;
   padding: 0;
 }
+/* Container principal dos comentários */
 .container {
-    background-color:black;
+    background: linear-gradient(135deg, #111111, #8b0000);
     max-width: 700px;
     margin: 0 auto;
-    padding:20px 30px;
-    box-shadow:  0 0 10px rgba( 0, 0, 0, 0.1);
+    padding: 20px 30px;
+    box-shadow: 0 0 12px rgba(210, 16, 23, 0.8);
     border-radius: 50px;
 }
 
+/* Título da seção */
 h1 {
     text-align: center;
     color: firebrick;
 
 }
 
-form{
+/* Formulário de comentário */
+form {
     margin-bottom: 30px;
-
 }
 
+/* Rótulos dos campos */
 label {
     display: block;
     margin-bottom: 6px;
@@ -37,6 +42,7 @@ label {
     color:firebrick;
 }
 
+/* Campos de texto e textarea */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -47,14 +53,13 @@ border: 1px solid black;
 border-radius: 4px;
 font-size: 1rem;
 resize: vertical;
-
 }
 
 textarea {
     min-height: 100px;
-    
 }
 
+/* Botão do formulário */
 button {
    width:200px;
     height:55px;
@@ -74,11 +79,9 @@ button {
     margin-top: 25px;
 }
 
-
 button:hover {
     background-color:#fff;
     color:#000;
-    
 }
 
 .comments{
@@ -131,11 +134,15 @@ ul{
     justify-content: space-between;
 }
 
+a {
+    text-decoration: none;
+}
+
 li{
     list-style: none;
-    color: #fff;
+    color: aliceblue;
     cursor: pointer;
-    font-size: 19px ;
+    font-size: 35px;
     transition: .5s;
     font-family: 'kdam thmor pro', sans-serif;
 }

@@ -1,38 +1,50 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-
+/* Reset global da página */
 *{
     margin: 0;
     padding: 0;
-    background-color: black;
     list-style: none;
     text-decoration: none;
 }
 
+/* Fundo principal do site */
+body {
+    background-image: url('https://image.tmdb.org/t/p/original/tAcDOFX0WludQhvTdmG2rDxyQRM.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
+/* Cabeçalho com logo e navegação */
 header{
     height: 90px;
     display: flex;
     justify-content: space-around;
-    align-items: center ;
+    align-items: center;
+    background: transparent;
 }
 
+/* Barra de navegação */
 nav{
     width: 60%;
 }
 
+/* Lista do menu principal */
 ul{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
+/* Itens do menu */
 li{
     list-style: none;
     color: aliceblue;
     cursor: pointer;
-    font-size: 19px ;
+    font-size: 35px ;
     transition: .5s;
     font-family: 'kdam thmor pro', sans-serif;
 }
@@ -41,6 +53,7 @@ li:hover{
     color: #d21617;
 }
 
+/* Logo do site */
 #logo{
     width: 150px;
     height: auto;
@@ -48,32 +61,48 @@ li:hover{
 
 }
 
+/* Banner principal da home */
 #banner{
-    background-image: url('https://encurtador.com.br/0TujU');
-    background-position: 50% 50%;
-    background-size: cover;
+    background: transparent;
     width: 100%;
     height: 600px;
-    
 }
 
+/* Seção do trailer e da sinopse */
 #trailer-container{
-    width: 110%;
-    height:550px ;
+    width: 100%;
+    min-height: 550px;
     display: flex;
-    justify-content:center ;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
 
 .content{
-    width: 60%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
+/* Vídeo do trailer */
 .trailer{
-    width:250%;
-    
+    width: 56%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Caixa da sinopse */
+#sinopse {
+    width: 44%;
+    color: #fff;
+    font-family: 'kdam thmor pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .description{
@@ -81,8 +110,10 @@ li:hover{
     font-size: 16px;
     font-family:'kdam thmor pro', sans-serif;
     width:100%;
+    line-height: 1.7;
 }
 
+/* Botão de compra */
 .button{
     width:350px;
     height:55px;
@@ -106,14 +137,15 @@ button:hover{
     background-color:#fff;
     color:#000;
 }
- .actor-cards-container{
+/* Cards de atores */
+.actor-cards-container{
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
  }
 
- .cards-content{
+.cards-content{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -121,7 +153,7 @@ button:hover{
     column-gap: 40px;
  }
 
- .card {
+.card {
     width: 100%;
     height: 600px;
     background-size: cover ;
@@ -141,6 +173,7 @@ button:hover{
 .card:hover {
     transform: scale(1.02);
 }
+
 .banner1 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3f5mozbpjs2OHNfT6qlpga8B9M_afmjhMEg&s');
  }
@@ -148,11 +181,13 @@ button:hover{
 .banner2 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTeQ5lOrIADVGy-I7Vt41ZVmlRMAK6AIvDIA&s')
 }
-    .banner3 {
+
+.banner3 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiyrkIM8EK7m6hCWOKKugHSzkE1OLOyl3rGA&s')
 }
   
- footer{
+/* Rodapé */
+footer{
     height: 20px;
     margin-top: 100px;
     display: flex;
@@ -161,7 +196,7 @@ button:hover{
     justify-content: space-around;
  }
 
- span{
+span{
     height: 20px;
     margin-top: 10px;
     color: #fff;
@@ -187,58 +222,55 @@ button:hover{
   }
 
   /* Menu principal some para dar lugar ao menu hambúrguer */
-    nav {
-   display: none;
+  nav {
+    display: none;
   }
 
   /* Banner reposicionado */
-#banner {
+  #banner {
     background-position: 40%;
   }
 
   /* Container do trailer ajustado para caber em telas pequenas */
-#trailer-container {
+  #trailer-container {
     width: 100%;
-    height: 550px;
+    min-height: auto;
     display: flex;
-    flex-direction: column;   /* Itens empilhados */
-    align-items: center;      /* Centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
   }
-    
+
   /* Conteúdo principal ajustado */
-.content {
+  .content {
     width: 95%;
     display: flex;
-    flex-direction: column;   /* Empilha os elementos */
+    flex-direction: column;
   }
 
+  /* Trailer ocupa largura total */
+  .trailer {
+    width: 100%;
+  }
 
-/* ========== Estilos aplicados sempre (independente da tela) ========== */
+  /* Sinopse ajustada para responsividade */
+  #sinopse {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-/* Trailer ocupa largura total */
-.trailer {
-  width: 100%;
-}
+  /* Descrição ocupa toda a largura disponível */
+  .description {
+    width: 100%;
+  }
 
-/* Sinopse ajustada para responsividade */
-#sinopse {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;        /* Centraliza o conteúdo */
-  justify-content: space-between;
-}
+  .button {
+    width: 100%;
+    margin-top: 50px;
+  }
 
-/* Descrição ocupa toda a largura disponível */
-.description {
-  width: 100%;
-
-}
-
-.button {
-  width: 100%;  
-  margin-top: 50px;            
-}
  .cards-content{
     grid-template-columns: 1fr;
  }

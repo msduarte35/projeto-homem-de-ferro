@@ -1,26 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
+/* Reset geral da página */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
+/* Fundo da página de fotos */
 body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
+      background-image: url('https://image.tmdb.org/t/p/original/tAcDOFX0WludQhvTdmG2rDxyQRM.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #fff;
       text-align: center;
     }
+
+/* Seção com faixa visual */
 section {
       background: linear-gradient(90deg, #b71c1c, #ffcc00);
       padding: 20px;
-
     }
 
+/* Cabeçalho com logo e menu */
 header{
     height: 90px;
     display: flex;
@@ -28,23 +34,29 @@ header{
     align-items: center ;
 }
 
+/* Navegação principal */
 nav{
     width: 60%;
 }
 
+/* Lista do menu */
 ul{
     display: flex;
-    text-indent:  50%;
+    width: 100%;
     justify-content: space-between;
-    
-;
 }
 
+/* Remove o sublinhado dos links */
+a {
+    text-decoration: none;
+}
+
+/* Itens do menu */
 li{
     list-style: none;
     color: aliceblue;
     cursor: pointer;
-    font-size: 20px ;
+    font-size: 35px;
     transition: .5s;
     font-family: 'kdam thmor pro', sans-serif;
 }
@@ -53,29 +65,31 @@ li:hover{
     color: #d21617;
 }
 
+/* Logo do site */
 #logo{
     width: 150px;
     height: auto;
     border-radius: 50%;
-    
 }
 
- header h1 {
+/* Título da galeria */
+header h1 {
       margin: 0;
       font-size: 2.5rem;
       color: #fff;
       text-shadow: 2px 2px 8px black;
       font-family:'kdam thmor pro', sans-serif; 
-    }
+}
 
+/* Grade de fotos da galeria */
 .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       padding: 20px;
-      
-    }
+}
 
+/* Estilo das imagens da galeria */
 .gallery img {
       width: 100%;
       height: 300px;
@@ -83,14 +97,14 @@ li:hover{
       border-radius: 12px;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
-    }
+}
 
- .gallery img:hover {
+.gallery img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-      
-    
-    }
+}
+
+/* Rodapé da página de fotos */
 .span1, .span2 {
    display: block;
    text-align: center;
@@ -98,4 +112,4 @@ li:hover{
    color: #fff;
    margin-top: 10px;
    font-family:'kdam thmor pro', sans-serif; 
-   }
+}
