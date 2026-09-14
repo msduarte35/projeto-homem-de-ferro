@@ -1,10 +1,16 @@
 <!-- Página de comentários do site -->
+<!-- Declara o tipo de documento HTML -->
 <!DOCTYPE html>
+<!-- Inicia o documento HTML com idioma inglês -->
 <html lang="en">
 <head>
+    <!-- Define a codificação de caracteres do documento -->
     <meta charset="UTF-8">
+    <!-- Ajusta a visualização para dispositivos móveis e responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
     <title>Document</title>
+    <!-- Conecta o arquivo de estilo CSS desta página -->
     <link rel="stylesheet" href="./Comentario.css">
 </head>
 <body>
@@ -35,29 +41,39 @@
 
 
     <!-- Formulário de envio de comentários -->
+    <!-- Container principal da área de comentários -->
     <div class="container">
+    <!-- Título da página de comentários -->
     <h1>Comentários sobre o filme homem de ferro</h1>
+    <!-- Início do formulário para envio de comentários -->
     <form id="commentForm">
         
+      <!-- Campo de nome do usuário -->
       <label for="name">Nome:</label>
       <input type="text" id="name" name="name" required />
 
+      <!-- Campo de e-mail do usuário -->
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
 
+      <!-- Campo opcional da URL da foto do usuário -->
        <label for="avatar">URL da Foto (opcional):</label>
       <input type="text" id="avatar" name="avatar" placeholder="https://exemplo.com/foto.jpg" />
 
+      <!-- Campo do texto do comentário -->
       <label for="comment">Comentário:</label>
       <textarea id="comment" name="comment" required></textarea>
         
+      <!-- Botão para enviar o comentário -->
       <button type="submit">Enviar Comentário</button>
 
 
     </form>
 
     <!-- Lista de comentários exibidos -->
+    <!-- Bloco que agrupa os comentários já cadastrados -->
     <div class="comments" id="commentsSection">
+      <!-- Primeiro comentário -->
       <div class="comment">
         <div class="comment-header">
           <img src="https://i.pravatar.cc/40?img=5" alt="Avatar Maria Silva" />
@@ -66,6 +82,7 @@
         </div>
         <div class="text">Filme Espetacular,com muita ação e diversão ao mesmo tempo.gostei!.</div>
       </div>
+      <!-- Segundo comentário -->
       <div class="comment-header">
           <img src="https://tse1.mm.bing.net/th/id/OIP.zgHtF7TEeEPwrJuV3wCSXwHaLG?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Avatar Maria joana" />
          <span class="author">Maria Pereira</span>

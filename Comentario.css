@@ -117,21 +117,27 @@ button:hover {
 }
 
 header{
-   
-    height: 90px;
+    min-height: 90px;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 nav{
-    width: 60%;
+    width: min(65%, 700px);
 }
 
 ul{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 a {
@@ -142,7 +148,7 @@ li{
     list-style: none;
     color: aliceblue;
     cursor: pointer;
-    font-size: 35px;
+    font-size: clamp(22px, 2vw, 35px);
     transition: .5s;
     font-family: 'kdam thmor pro', sans-serif;
 }
@@ -151,12 +157,19 @@ li:hover{
     color: #d21617;
 }
 
-#logo{
-    width: 150px;
+#logo {
+    width: clamp(110px, 12vw, 150px);
     height: auto;
     border-radius: 50%;
-    
+    border: 2px solid #d21617;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 12px rgba(210, 22, 23, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.4);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
+    
+
 
 .span1, .span2 {
   display: block;

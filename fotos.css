@@ -66,11 +66,18 @@ li:hover{
 }
 
 /* Logo do site */
-#logo{
+#logo {
     width: 150px;
     height: auto;
     border-radius: 50%;
+    border: 2px solid #d21617;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 12px rgba(210, 22, 23, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.4);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
+
 
 /* Título da galeria */
 header h1 {
